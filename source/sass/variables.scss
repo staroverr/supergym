@@ -1,0 +1,19 @@
+// переменные ширины вьюпорта
+
+$tablet-max-width: 1199px;
+$mobile-max-width: 767px;
+
+//переменные шрифтов
+
+$roboto: "RobotoCondensed", "Arial", sans-serif;
+$bebas: "BebasNeue", "Arial", sans-serif;
+
+// переменные цвета
+
+$white: #ffffff;
+$gradient-start-color: #003d85;
+$gradient-end-color: #b80027;
+
+// переменные ретинизации графики
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
