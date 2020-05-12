@@ -1,17 +1,17 @@
 $img-desktop-width: 500px;
 $img-desktop-height: 556px;
-$promo-desktop-content-width: 396px;
+$promo-desktop-content-width: 460px;
 $promo-desktop-gutter: 64px;
 
 $img-tablet-width: 324px;
 $img-tablet-height: 390px;
+$promo-tablet-content-width: $tablet-content-width - $img-tablet-width;
 $promo-tablet-gutter: 30px;
 
 .header {
   @include wrapper-outer;
-  flex-direction: column;
+  flex-flow: column wrap;
   align-items: center;
-  position: relative;
 
   color: $white;
   background: conic-gradient(from 175deg at 17.03% 39.06%, $gradient-start-color 0%, $gradient-end-color 70%, $gradient-start-color 100%);
@@ -43,26 +43,24 @@ $promo-tablet-gutter: 30px;
 
 .header__promo {
   position: relative;
-  box-sizing: border-box;
-  padding-top: 112px;
-  padding-bottom: 96px;
-  padding-right: $desktop-content-width - $promo-desktop-content-width;
+  padding-bottom: 45px;
 
   @include wrapper-inner;
+  display: flex;
+}
+
+.header__column {
+  width: percentage($promo-desktop-content-width / $desktop-content-width);
+  box-sizing: border-box;
+  padding-top: 112px;
+  padding-right: $promo-desktop-gutter;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 
-  background: url("../img/superman.jpg") $promo-desktop-content-width + $promo-desktop-gutter 0 no-repeat;
-  background-size: $img-desktop-width $img-desktop-height;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/superman-2x.jpg");
-    background-size: $img-desktop-width auto;
-  }
-
   span {
     margin-bottom: 10px;
+    order: -1;
 
     font: 49px/49px $bebas;
     letter-spacing: 0.03em;
@@ -82,7 +80,7 @@ $promo-tablet-gutter: 30px;
     padding: 0;
     position: absolute;
     left: 20px;
-    bottom: 240px;
+    bottom: 236px;
 
     list-style: none;
     font: 14px/150% $roboto;
@@ -98,12 +96,16 @@ $promo-tablet-gutter: 30px;
   }
 }
 
+.header__pic {
+  font-size: 0;
+}
+
 .header__social {
   margin: 0;
   padding: 0;
   position: absolute;
   right: 0;
-  bottom: 96px;
+  bottom: 90px;
 
   list-style: none;
   text-align: right;
@@ -132,15 +134,13 @@ $promo-tablet-gutter: 30px;
   }
 
   .header__promo {
-    padding-top: 50px;
-    padding-right: $promo-tablet-gutter + $img-tablet-width;
-    padding-bottom: 100px;
-    background-position: $tablet-content-width - $img-tablet-width 0;
-    background-size: auto $img-tablet-height;
+    padding-bottom: 80px;
+  }
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-size: $img-tablet-width auto;
-    }
+  .header__column {
+    width: $promo-tablet-content-width;
+    padding-top: 50px;
+    padding-right: $promo-tablet-gutter;
 
     span {
       margin-bottom: 10px;
@@ -156,11 +156,19 @@ $promo-tablet-gutter: 30px;
 
     .header__features {
       left: 0;
-      bottom: 215px;
+      bottom: 222px;
     }
 
     .header__btn {
       width: 183px;
+    }
+  }
+
+  .header__pic {
+    img {
+      width: $img-tablet-width;
+      height: $img-tablet-height;
+      object-fit: cover;
     }
   }
 
@@ -171,7 +179,7 @@ $promo-tablet-gutter: 30px;
 
 @media (max-width: $mobile-max-width) {
   .header {
-    background: conic-gradient(from 270deg at 40.03% 37.06%, $gradient-start-color 0%, $gradient-end-color 74%, $gradient-start-color 100%);
+    background: conic-gradient(from 215deg at 40.03% 37.06%, $gradient-start-color 0%, $gradient-end-color 74%, $gradient-start-color 100%);
   }
 
   .header__top {
@@ -180,8 +188,11 @@ $promo-tablet-gutter: 30px;
   }
 
   .header__promo {
-    padding: 50px 0 80px;
-    background: none;
+    padding-bottom: 80px;
+  }
+
+  .header__column {
+    padding: 50px 0 0;
 
     span {
       margin-bottom: 10px;
@@ -200,5 +211,9 @@ $promo-tablet-gutter: 30px;
     .header__btn {
       width: 100%;
     }
+  }
+
+  .header__pic {
+    display: none;
   }
 }
