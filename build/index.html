@@ -42,17 +42,17 @@
   <main>
     <section class="gym">
       <div class="gym__wrapper">
-        <div class="gym__content">
+        <div class="gym__column">
           <h2>Тренажерный зал</h2>
-          <p class="gym__text--stronger">Просторный зал площадью 900 кв/м</p>
+          <p class="gym__strong-text">Просторный зал площадью 900 кв/м</p>
           <p class="gym__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и
             здоровья.
             Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
-          <p class="gym__text">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в
+          <p class="gym__text gym__text--append">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в
             фитнес центре есть
             несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
-        <picture>
+        <picture class="gym__pic">
           <source type="image/webp" srcset="img/gym.webp 1x, img/gym-2x.webp 2x">
           <img width="660" height="401" src="img/gym.jpg" srcset="img/gym-2x.jpg 2x" alt="Фото тренажёрного зала">
         </picture>
@@ -61,6 +61,23 @@
             <source type="image/webp" srcset="img/video-preview.webp 1x, img/video-preview-2x.webp 2x">
             <img width="364" height="228" src="img/video-preview.jpg" srcset="img/video-preview-2x.jpg 2x" alt="Превью видео о зале">
           </picture>
+          <div class="gym__screen-play">
+            <svg class="gym__play-btn" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="49" stroke="url(#paint0_linear)" stroke-opacity="0.2" stroke-width="2"></circle>
+              <circle cx="50" cy="50" r="36" fill="url(#paint1_linear)"></circle>
+              <path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"></path>
+              <defs>
+                <linearGradient id="paint0_linear" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#ED0233"></stop>
+                  <stop offset="1" stop-color="#003EB7"></stop>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="14" y1="49.52" x2="54.1858" y2="9.18415" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#003D85"></stop>
+                  <stop offset="0.885417" stop-color="#B80027"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </section>

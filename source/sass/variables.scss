@@ -1,19 +1,27 @@
 // переменные ширины вьюпорта
 
-$tablet-max-width: 1199px;
-$mobile-max-width: 767px;
+$tablet_max_width: 1199px;
+$mobile_max_width: 767px;
 
 //переменные шрифтов
 
-$roboto: "RobotoCondensed", "Arial", sans-serif;
-$bebas: "BebasNeue", "Arial", sans-serif;
+$roboto: "RobotoCondensed", "Arial", sans_serif;
+$bebas: "BebasNeue", "Arial", sans_serif;
 
 // переменные цвета
 
 $white: #ffffff;
-$gradient-start-color: #003d85;
-$gradient-end-color: #b80027;
+$gradient_start_color: #003d85;
+$gradient_end_color: #b80027;
+$text_color_dark: #102654;
 
 // переменные ретинизации графики
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
+$retina_dpi: 144dpi;
+$retina_dppx: 1.5dppx;
+
+//общие переменные сетки
+
+$desktop_content_width: 1160px;
+$tablet_content_width: 678px;
+$mobile_content_width: 290px;
+$mobile_layout_padding: 15px;

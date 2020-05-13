@@ -1,24 +1,31 @@
-$desktop-content-width: 1160px;
-$tablet-content-width: 678px;
-$mobile-content-width: 290px;
-$mobile-layout-padding: 15px;
-
 @mixin wrapper-outer {
   display: flex;
   justify-content: center;
 }
 
-@mixin wrapper-inner {
-  max-width: $desktop-content-width;
+@mixin wrapper-inner ($fluid: false) {
+  max-width: $desktop_content_width;
   width: 100%;
 
-  @media (max-width: $tablet-max-width) {
-    max-width: $tablet-content-width;
+  @media (max-width: $tablet_max_width) {
+    max-width: $tablet_content_width;
   }
 
-  @media (max-width: $mobile-max-width) {
-    max-width: $mobile-content-width;
+  @media (max-width: $mobile_max_width) {
+    @if ($fluid) {
+      max-width: none;
+      padding: 0 $mobile_layout_padding;
+    }
+
+    @else {
+      max-width: $mobile_content_width;
+    }
   }
+}
+
+@mixin no-wrapper-mobile-at-fluid {
+  margin: 0 -#{$mobile_layout_padding};
+  width: calc(100% + 2 * #{$mobile_layout_padding});
 }
 
 @mixin button {
@@ -32,4 +39,18 @@ $mobile-layout-padding: 15px;
   text-transform: uppercase;
   text-align: center;
   border: 4px solid $white;
+}
+
+@mixin desktop-h2-heading {
+  font: bold 49px/49px $bebas;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet_max_width) {
+    font: bold 42px/42px $bebas;
+  }
+
+  @media (max-width: $mobile_max_width) {
+    font: bold 32px/32px $bebas;
+  }
 }

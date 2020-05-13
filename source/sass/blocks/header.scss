@@ -1,12 +1,21 @@
-$img-desktop-width: 500px;
-$img-desktop-height: 556px;
-$promo-desktop-content-width: 460px;
-$promo-desktop-gutter: 64px;
+$img_desktop_width: 500px;
+$img_desktop_height: 556px;
+$promo_desktop_content_width: 460px;
+$promo_desktop_gutter: 64px;
 
-$img-tablet-width: 324px;
-$img-tablet-height: 390px;
-$promo-tablet-content-width: $tablet-content-width - $img-tablet-width;
-$promo-tablet-gutter: 30px;
+$img_tablet_width: 324px;
+$img_tablet_height: 390px;
+$promo_tablet_content_width: $tablet_content_width - $img_tablet_width;
+$promo_tablet_gutter: 30px;
+
+$desktop_gradient_center_x: 116px;
+$desktop_gradient_center_y: 257px;
+
+$tablet_gradient_center_x: 114px;
+$tablet_gradient_center_y: 198px;
+
+$mobile_gradient_center_x: 98px;
+$mobile_gradient_center_y: 168px;
 
 .header {
   @include wrapper-outer;
@@ -14,7 +23,7 @@ $promo-tablet-gutter: 30px;
   align-items: center;
 
   color: $white;
-  background: conic-gradient(from 175deg at 17.03% 39.06%, $gradient-start-color 0%, $gradient-end-color 70%, $gradient-start-color 100%);
+  background: conic-gradient(from 175deg at calc((100% - #{$desktop_content_width}) / 2 + #{$desktop_gradient_center_x}) $desktop_gradient_center_y, $gradient_start_color 0%, $gradient_end_color 70%, $gradient_start_color 100%);
 }
 
 .header__top {
@@ -50,10 +59,10 @@ $promo-tablet-gutter: 30px;
 }
 
 .header__column {
-  width: percentage($promo-desktop-content-width / $desktop-content-width);
+  width: percentage($promo_desktop_content_width / $desktop_content_width);
   box-sizing: border-box;
   padding-top: 112px;
-  padding-right: $promo-desktop-gutter;
+  padding-right: $promo_desktop_gutter;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -96,10 +105,6 @@ $promo-tablet-gutter: 30px;
   }
 }
 
-.header__pic {
-  font-size: 0;
-}
-
 .header__social {
   margin: 0;
   padding: 0;
@@ -121,9 +126,9 @@ $promo-tablet-gutter: 30px;
   }
 }
 
-@media (max-width: $tablet-max-width) {
+@media (max-width: $tablet_max_width) {
   .header {
-    background: conic-gradient(from 215deg at 17.03% 39.06%, $gradient-start-color 0%, $gradient-end-color 50%, $gradient-start-color 100%);
+    background: conic-gradient(from 215deg at calc((100% - #{$tablet_content_width}) / 2 + #{$tablet_gradient_center_x}) $tablet_gradient_center_y, $gradient_start_color 0%, $gradient_end_color 50%, $gradient_start_color 100%);
   }
 
   .header__top {
@@ -138,9 +143,9 @@ $promo-tablet-gutter: 30px;
   }
 
   .header__column {
-    width: $promo-tablet-content-width;
+    width: $promo_tablet_content_width;
     padding-top: 50px;
-    padding-right: $promo-tablet-gutter;
+    padding-right: $promo_tablet_gutter;
 
     span {
       margin-bottom: 10px;
@@ -166,8 +171,8 @@ $promo-tablet-gutter: 30px;
 
   .header__pic {
     img {
-      width: $img-tablet-width;
-      height: $img-tablet-height;
+      width: $img_tablet_width;
+      height: $img_tablet_height;
       object-fit: cover;
     }
   }
@@ -177,9 +182,9 @@ $promo-tablet-gutter: 30px;
   }
 }
 
-@media (max-width: $mobile-max-width) {
+@media (max-width: $mobile_max_width) {
   .header {
-    background: conic-gradient(from 215deg at 40.03% 37.06%, $gradient-start-color 0%, $gradient-end-color 74%, $gradient-start-color 100%);
+    background: conic-gradient(from 215deg at calc((100% - #{$mobile_content_width}) / 2 + #{$mobile_gradient_center_x}) $mobile_gradient_center_y, $gradient_start_color 0%, $gradient_end_color 74%, $gradient_start_color 100%);
   }
 
   .header__top {
