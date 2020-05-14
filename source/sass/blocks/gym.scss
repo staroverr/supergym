@@ -9,7 +9,7 @@ $gym_tablet_video_xcoord: ($tablet_content_width - $gym_tablet_video_width) / 2;
 
 .gym {
   @include wrapper-outer;
-  padding: 120px 0;
+  padding: 120px 0 235px;
 }
 
 .gym__wrapper {
@@ -26,7 +26,7 @@ $gym_tablet_video_xcoord: ($tablet_content_width - $gym_tablet_video_width) / 2;
   h2 {
     margin: 0 0 8px;
 
-    @include desktop-h2-heading;
+    @include h2-heading;
   }
 }
 

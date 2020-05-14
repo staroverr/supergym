@@ -28,20 +28,7 @@
   width: calc(100% + 2 * #{$mobile_layout_padding});
 }
 
-@mixin button {
-  display: block;
-  box-sizing: border-box;
-  padding: 20px;
-
-  text-decoration: none;
-  color: $white;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  text-align: center;
-  border: 4px solid $white;
-}
-
-@mixin desktop-h2-heading {
+@mixin h2-heading {
   font: bold 49px/49px $bebas;
   letter-spacing: 0.03em;
   text-transform: uppercase;

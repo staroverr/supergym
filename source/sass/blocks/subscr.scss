@@ -1,0 +1,182 @@
+$subscr_desktop_grad_pos: 120px;
+$subsct_desktop_card_gutter: 40px;
+$subscr_card_height: 448px;
+$subscr_btn_width: 206px;
+$subscr_bg_pic_right: -50px;
+$subscr_bg_pic_bottom: -30px;
+
+.subscr {
+  @include wrapper-outer;
+  padding: 120px 0 240px;
+  background: url("../img/barbell-disks.png") right calc((100% - #{$desktop_content_width}) / 2 + #{$subscr_bg_pic_right}) bottom $subscr_bg_pic_bottom no-repeat,
+    linear-gradient(to top, transparent, transparent $subscr_desktop_grad_pos, $subscr_bg_color $subscr_desktop_grad_pos);
+}
+
+.subscr__wrapper {
+  @include wrapper-inner;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    @include h2-heading;
+    margin: 0 0 35px;
+  }
+}
+
+.subscr__tab-list {
+  display: flex;
+  padding: 0 0 10px;
+  margin: 0 0 40px;
+
+  list-style: none;
+  font: 20px/150% $roboto;
+  color: $inactive_tab_color;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.subscr__tab {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:not(:last-child) {
+    margin-right: 46px;
+  }
+
+  &--active {
+    color: $text_color_dark;
+  }
+
+  &--active::after {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    height: 2px;
+
+    content: "";
+    background-color: $underline_color;
+  }
+
+  &:hover {
+    color: $text_color_dark;
+  }
+
+}
+
+.subscr__card-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: stretch;
+
+  list-style: none;
+}
+
+.subscr__card {
+  box-sizing: border-box;
+  width: calc(33.3% - #{$subsct_desktop_card_gutter} * 2 / 3);
+  min-height: $subscr_card_height;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 62px 0 71px;
+  position: relative;
+  z-index: 2;
+
+  background-color: $white;
+
+  &::before {
+    content: "";
+    transition: 0.3s;
+  }
+
+  &:not(:last-child) {
+    margin-right: $subsct_desktop_card_gutter;
+  }
+
+  h3 {
+    margin: 0 0 11px;
+
+    font: bold 26px/29px $roboto;
+  }
+
+  &:hover::before {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-image-source: linear-gradient(to top left, $gradient_start_color, $gradient_end_color);
+    border-image-slice: 1;
+  }
+}
+
+.subscr__desc {
+  margin-bottom: auto;
+  color: $text_color_alt;
+}
+
+.subscr__price {
+  margin-bottom: 36px;
+
+  font: bold 60px/150% $roboto;
+  color: $text_price_color;
+}
+
+.subscr__price-replica {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: calc(50% - 62px);
+  transform: translateX(-50%);
+
+  font: bold 100px/150% $roboto;
+  color: $text_price_replica;
+  opacity: 0.48;
+}
+
+.subscr__link {
+  display: block;
+  box-sizing: inherit;
+  max-width: $subscr_btn_width;
+  width: 100%;
+  padding: 24px 15px;
+  position: relative;
+
+  font: bold 12px/14px $roboto;
+  letter-spacing: 0.05em;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    content: "";
+    border: 2px solid $text_color_dark;
+  }
+
+  &:hover {
+    border: none;
+    background-image: linear-gradient(to left, $gradient_start_color, $gradient_end_color);
+    color: $white;
+  }
+
+  &:hover::before {
+    display: none;
+  }
+}
