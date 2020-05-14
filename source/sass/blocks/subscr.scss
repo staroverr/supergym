@@ -121,7 +121,7 @@ $subscr_mobile_card_height: 384px;
     content: "";
     border-width: 7px;
     border-style: solid;
-    border-image-source: linear-gradient(to top left, $gradient_start_color, $gradient_end_color);
+    border-image-source: linear-gradient(to bottom right, $border_gradient_start_color, $border_gradient_end_color);
     border-image-slice: 1;
   }
 }
@@ -179,7 +179,7 @@ $subscr_mobile_card_height: 384px;
 
   &:hover {
     border: none;
-    background-image: linear-gradient(to left, $gradient_start_color, $gradient_end_color);
+    background-image: linear-gradient(to right, $btn_gradient_start_color, $btn_gradient_end_color);
     color: $white;
   }
 

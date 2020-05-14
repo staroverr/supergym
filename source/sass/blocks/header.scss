@@ -23,7 +23,7 @@ $mobile_gradient_center_y: 168px;
   align-items: center;
 
   color: $white;
-  background: conic-gradient(from 175deg at calc((100% - #{$desktop_content_width}) / 2 + #{$desktop_gradient_center_x}) $desktop_gradient_center_y, $gradient_start_color 0%, $gradient_end_color 70%, $gradient_start_color 100%);
+  background: conic-gradient(from 175deg at calc((100% - #{$desktop_content_width}) / 2 + #{$desktop_gradient_center_x}) $desktop_gradient_center_y, $conic_gradient_start_color 0%, $conic_gradient_end_color 70%, $conic_gradient_start_color 100%);
 }
 
 .header__top {
@@ -135,7 +135,7 @@ $mobile_gradient_center_y: 168px;
 
 @media (max-width: $tablet_max_width) {
   .header {
-    background: conic-gradient(from 215deg at calc((100% - #{$tablet_content_width}) / 2 + #{$tablet_gradient_center_x}) $tablet_gradient_center_y, $gradient_start_color 0%, $gradient_end_color 50%, $gradient_start_color 100%);
+    background: conic-gradient(from 215deg at calc((100% - #{$tablet_content_width}) / 2 + #{$tablet_gradient_center_x}) $tablet_gradient_center_y, $conic_gradient_start_color 0%, $conic_gradient_end_color 50%, $conic_gradient_start_color 100%);
   }
 
   .header__top {
@@ -191,7 +191,7 @@ $mobile_gradient_center_y: 168px;
 
 @media (max-width: $mobile_max_width) {
   .header {
-    background: conic-gradient(from 215deg at calc((100% - #{$mobile_content_width}) / 2 + #{$mobile_gradient_center_x}) $mobile_gradient_center_y, $gradient_start_color 0%, $gradient_end_color 74%, $gradient_start_color 100%);
+    background: conic-gradient(from 215deg at calc((100% - #{$mobile_content_width}) / 2 + #{$mobile_gradient_center_x}) $mobile_gradient_center_y, $conic_gradient_start_color 0%, $conic_gradient_end_color 74%, $conic_gradient_start_color 100%);
   }
 
   .header__top {
