@@ -9,7 +9,7 @@ $subscr_tablet_grad_pos: 100px;
 $subscr_tablet_bg_pic_right: -76px;
 $subscr_tablet_bg_pic_bottom: -23px;
 $subscr_tablet_card_padding: 163px - $tablet_layout_padding;
-$subsct_tablet_card_gutter: 35px;
+$subscr_tablet_card_gutter: 40px;
 
 $subscr_mobile_card_height: 384px;
 
@@ -216,10 +216,11 @@ $subscr_mobile_card_height: 384px;
 
   .subscr__card {
     width: 100%;
+    padding-bottom: 68px;
 
     &:not(:last-child) {
       margin-right: 0;
-      margin-bottom: $subsct_tablet_card_gutter;
+      margin-bottom: $subscr_tablet_card_gutter;
     }
   }
 }
