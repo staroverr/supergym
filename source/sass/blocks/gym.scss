@@ -5,7 +5,6 @@ $gym_desktop_video_xcoord: 437px;
 
 $gym_tablet_video_width: 266px;
 $gym_tablet_video_height: 167px;
-$gym_tablet_video_xcoord: ($tablet_content_width - $gym_tablet_video_width) / 2;
 
 .gym {
   @include wrapper-outer;
@@ -101,7 +100,8 @@ $gym_tablet_video_xcoord: ($tablet_content_width - $gym_tablet_video_width) / 2;
   .gym__video {
     width: $gym_tablet_video_width;
     height: $gym_tablet_video_height;
-    left: $gym_tablet_video_xcoord;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: -83px;
 
     img {
@@ -148,6 +148,7 @@ $gym_tablet_video_xcoord: ($tablet_content_width - $gym_tablet_video_width) / 2;
     height: 167px;
     position: relative;
     left: auto;
+    transform: translateX(0);
     bottom: auto;
   }
 }
