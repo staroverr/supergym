@@ -2,18 +2,26 @@ $subscr_desktop_grad_pos: 120px;
 $subsct_desktop_card_gutter: 40px;
 $subscr_card_height: 448px;
 $subscr_btn_width: 206px;
-$subscr_bg_pic_right: -50px;
-$subscr_bg_pic_bottom: -30px;
+$subscr_desktop_bg_pic_right: -50px;
+$subscr_desktop_bg_pic_bottom: -30px;
+
+$subscr_tablet_grad_pos: 100px;
+$subscr_tablet_bg_pic_right: -76px;
+$subscr_tablet_bg_pic_bottom: -23px;
+$subscr_tablet_card_padding: 163px - $tablet_layout_padding;
+$subsct_tablet_card_gutter: 35px;
+
+$subscr_mobile_card_height: 384px;
 
 .subscr {
   @include wrapper-outer;
   padding: 120px 0 240px;
-  background: url("../img/barbell-disks.png") right calc((100% - #{$desktop_content_width}) / 2 + #{$subscr_bg_pic_right}) bottom $subscr_bg_pic_bottom no-repeat,
+  background: url("../img/barbell-disks.png") right calc((100% - #{$desktop_content_width}) / 2 + #{$subscr_desktop_bg_pic_right}) bottom $subscr_desktop_bg_pic_bottom no-repeat,
     linear-gradient(to top, transparent, transparent $subscr_desktop_grad_pos, $subscr_bg_color $subscr_desktop_grad_pos);
 }
 
 .subscr__wrapper {
-  @include wrapper-inner;
+  @include wrapper-inner(true);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,7 +70,6 @@ $subscr_bg_pic_bottom: -30px;
   &:hover {
     color: $text_color_dark;
   }
-
 }
 
 .subscr__card-list {
@@ -148,7 +155,7 @@ $subscr_bg_pic_bottom: -30px;
   box-sizing: inherit;
   max-width: $subscr_btn_width;
   width: 100%;
-  padding: 24px 15px;
+  padding: 26px 15px;
   position: relative;
 
   font: bold 12px/14px $roboto;
@@ -178,5 +185,95 @@ $subscr_bg_pic_bottom: -30px;
 
   &:hover::before {
     display: none;
+  }
+}
+
+@media (max-width: $tablet_max_width) {
+  .subscr {
+    padding: 100px 0 200px;
+
+    background: url("../img/barbell-disks-tablet.png") right $subscr_tablet_bg_pic_right bottom $subscr_tablet_bg_pic_bottom no-repeat,
+      linear-gradient(to top, transparent, transparent $subscr_tablet_grad_pos, $subscr_bg_color $subscr_tablet_grad_pos);
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .subscr__tab-list {
+    margin-bottom: 45px;
+    font: 18px/150% $roboto;
+  }
+
+  .subscr__tab:not(:last-child) {
+    margin-right: 55px;
+  }
+
+  .subscr__card-list {
+    padding: 0 $subscr_tablet_card_padding;
+    flex-direction: column;
+  }
+
+  .subscr__card {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: $subsct_tablet_card_gutter;
+    }
+  }
+}
+
+@media (max-width: $mobile_max_width) {
+  .subscr {
+    padding: 70px 0 74px;
+
+    background: $subscr_bg_color;
+
+    h2 {
+      margin-bottom: 23px;
+    }
+  }
+
+  .subscr__tab-list {
+    margin-bottom: 37px;
+    max-width: $mobile_content_width;
+    width: 100%;
+    justify-content: space-between;
+
+    font: 16px/150% $roboto;
+  }
+
+  .subscr__tab:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .subscr__card-list {
+    padding: 0;
+  }
+
+  .subscr__card {
+    padding: 50px 0 55px;
+    min-height: $subscr_mobile_card_height;
+
+    h3 {
+      font: bold 22px/110.16% $roboto;
+    }
+  }
+
+  .subscr__price {
+    margin-bottom: 30px;
+
+    font: bold 48px/150% $roboto;
+
+    svg {
+      width: 24px;
+      height: auto;
+    }
+  }
+
+  .subscr__price-replica {
+    font: 80px/150% $roboto;
+    bottom: calc(50% - 44px);
   }
 }

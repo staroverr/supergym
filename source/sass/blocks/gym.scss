@@ -145,7 +145,6 @@ $gym_tablet_video_xcoord: ($tablet_content_width - $gym_tablet_video_width) / 2;
 
   .gym__video {
     @include no-wrapper-mobile-at-fluid;
-    margin-bottom: 66px;
     height: 167px;
     position: relative;
     left: auto;
