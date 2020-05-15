@@ -41,6 +41,10 @@ $superman_bg_color: #003d85;
     color: inherit;
     text-decoration: none;
     letter-spacing: 0.03em;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -93,18 +97,27 @@ $superman_bg_color: #003d85;
   }
 
   .header__btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-sizing: border-box;
-    padding: 20px;
     width: 230px;
+    height: 57px;
 
-    font: 12px/14px $roboto;
+    font: bold 12px/14px $roboto;
     text-decoration: none;
     color: $white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-align: center;
     border: 4px solid $white;
+    transition: 0.3s;
+
+    &:hover {
+      border-width: 10px;
+      background-color: $white;
+      color: $superman_bg_color;
+    }
   }
 }
 
@@ -130,6 +143,10 @@ $superman_bg_color: #003d85;
     text-decoration: none;
     font: 12px/14px $roboto;
     color: inherit;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -173,6 +190,7 @@ $superman_bg_color: #003d85;
 
     .header__btn {
       width: 183px;
+      height: 57px;
     }
   }
 
@@ -222,6 +240,7 @@ $superman_bg_color: #003d85;
 
     .header__btn {
       width: 100%;
+      height: 63px;
     }
   }
 
