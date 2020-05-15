@@ -4,18 +4,20 @@
 }
 
 .promo__wrapper {
-  @include wrapper-inner;
+  @include wrapper-inner(true);
   display: flex;
+
+  background-color: $btn_gradient_start_color;
 }
 
 .promo__content {
   flex-grow: 1;
+  box-sizing: border-box;
   padding: 82px 78px 86px;
   display: flex;
   flex-direction: column;
 
   color: $white;
-  background-color: $btn_gradient_start_color;
 
   p {
     margin: 0 0 auto;
@@ -101,5 +103,138 @@
   img {
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: $tablet_max_width) {
+  .promo {
+    padding-bottom: 100px;
+  }
+
+  .promo__content {
+    padding: 51px 45px 51px;
+
+    p {
+      font: 12px/150% $roboto;
+    }
+  }
+
+  .promo__header {
+    margin-bottom: 0;
+
+    h2 {
+      font: bold 52px/52px $bebas;
+    }
+  }
+
+  .promo__date-block {
+    &:first-child {
+      margin-bottom: 12px;
+    }
+  }
+
+  .promo__date-title {
+    padding-bottom: 0;
+    font: 12px/14px $roboto;
+  }
+
+  .promo__date-major {
+    font: bold 24px/26px $roboto;
+  }
+
+  .promo__date-minor {
+    padding-left: 2px;
+    font: 10px/12px $roboto;
+  }
+
+  .promo__link {
+    min-height: 41px;
+
+    font: bold 10px/12px $roboto;
+
+    &:hover {
+      border-width: 10px;
+    }
+  }
+
+  .promo__pic {
+    img {
+      width: 386px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: $mobile_max_width) {
+  .promo {
+    padding: 74px 0 100px;
+  }
+
+  .promo__wrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    background-clip: content-box;
+  }
+
+  .promo__content {
+    flex-grow: 0;
+    padding: 51px 45px 51px;
+    width: 100%;
+    max-width: $mobile_content_width;
+    display: flex;
+    justify-content: center;
+
+    p {
+      font: 12px/150% $roboto;
+    }
+  }
+
+  .promo__header {
+    margin-bottom: 0;
+
+    h2 {
+      font: bold 52px/52px $bebas;
+    }
+  }
+
+  .promo__date-block {
+    &:first-child {
+      margin-bottom: 12px;
+    }
+  }
+
+  .promo__date-title {
+    padding-bottom: 0;
+    font: 12px/14px $roboto;
+  }
+
+  .promo__date-major {
+    font: bold 24px/26px $roboto;
+  }
+
+  .promo__date-minor {
+    padding-left: 2px;
+    font: 10px/12px $roboto;
+  }
+
+  .promo__link {
+    min-height: 41px;
+
+    font: bold 10px/12px $roboto;
+
+    &:hover {
+      border-width: 10px;
+    }
+  }
+
+  .promo__pic {
+    img {
+      width: 100%;
+      height: 292px;
+      object-fit: cover;
+    }
   }
 }
