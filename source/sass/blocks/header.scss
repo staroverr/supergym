@@ -71,6 +71,8 @@ $promo_tablet_gutter: 30px;
 
   h1 {
     margin: 0 0 57px;
+    max-width: calc(100% - #{$promo_desktop_gutter});
+
     font: 900 109px/109px $bebas;
     letter-spacing: 0.03em;
     text-align: right;
