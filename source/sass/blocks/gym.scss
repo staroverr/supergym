@@ -1,6 +1,8 @@
 $gym_desktop_img_width: 660px;
 $gym_desktop_content_width: $desktop_content_width - $gym_desktop_img_width;
 
+$gym_pic_bg_color: #b8b8b8;
+
 $gym_desktop_video_xcoord: 437px;
 
 $gym_tablet_video_width: 266px;
@@ -41,10 +43,16 @@ $gym_tablet_video_height: 167px;
   font: 300 16px/150% $roboto;
 }
 
+.gym__pic {
+  background-color: $gym_pic_bg_color;
+}
+
 .gym__video {
   position: absolute;
   left: $gym_desktop_video_xcoord;
   bottom: -115px;
+
+  background-color: $gym_pic_bg_color;
 }
 
 .gym__screen-play {
