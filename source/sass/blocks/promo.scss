@@ -29,10 +29,13 @@
 
 .promo__header {
   display: flex;
+  justify-content: space-between;
   margin-bottom: 8px;
 
   h2 {
     margin: 0;
+    max-width: 60%;
+
     font: bold 90px/90px $bebas;
     letter-spacing: 0.03em;
   }
