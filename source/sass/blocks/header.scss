@@ -8,6 +8,8 @@ $img_tablet_height: 390px;
 $promo_tablet_content_width: $tablet_content_width - $img_tablet_width;
 $promo_tablet_gutter: 30px;
 
+$superman_bg_color: #003d85;
+
 .header {
   @include wrapper-outer;
   flex-flow: column wrap;
@@ -104,6 +106,10 @@ $promo_tablet_gutter: 30px;
     text-align: center;
     border: 4px solid $white;
   }
+}
+
+.header__pic {
+  background-color: $superman_bg_color;
 }
 
 .header__social {
