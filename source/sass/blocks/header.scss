@@ -8,22 +8,14 @@ $img_tablet_height: 390px;
 $promo_tablet_content_width: $tablet_content_width - $img_tablet_width;
 $promo_tablet_gutter: 30px;
 
-$desktop_gradient_center_x: 116px;
-$desktop_gradient_center_y: 257px;
-
-$tablet_gradient_center_x: 114px;
-$tablet_gradient_center_y: 198px;
-
-$mobile_gradient_center_x: 98px;
-$mobile_gradient_center_y: 168px;
-
 .header {
   @include wrapper-outer;
   flex-flow: column wrap;
   align-items: center;
 
   color: $white;
-  background: conic-gradient(from 175deg at calc((100% - #{$desktop_content_width}) / 2 + #{$desktop_gradient_center_x}) $desktop_gradient_center_y, $conic_gradient_start_color 0%, $conic_gradient_end_color 70%, $conic_gradient_start_color 100%);
+  background: $header_bg_color url("../img/header-bg.jpg") no-repeat;
+  background-size: cover;
 }
 
 .header__top {
@@ -135,7 +127,7 @@ $mobile_gradient_center_y: 168px;
 
 @media (max-width: $tablet_max_width) {
   .header {
-    background: conic-gradient(from 215deg at calc((100% - #{$tablet_content_width}) / 2 + #{$tablet_gradient_center_x}) $tablet_gradient_center_y, $conic_gradient_start_color 0%, $conic_gradient_end_color 50%, $conic_gradient_start_color 100%);
+    background: $header_bg_color url("../img/header-bg.jpg")  9% 42% no-repeat;
   }
 
   .header__top {
@@ -191,7 +183,7 @@ $mobile_gradient_center_y: 168px;
 
 @media (max-width: $mobile_max_width) {
   .header {
-    background: conic-gradient(from 215deg at calc((100% - #{$mobile_content_width}) / 2 + #{$mobile_gradient_center_x}) $mobile_gradient_center_y, $conic_gradient_start_color 0%, $conic_gradient_end_color 74%, $conic_gradient_start_color 100%);
+    background: $header_bg_color url("../img/header-bg.jpg") 10% 45% no-repeat;
   }
 
   .header__top {
