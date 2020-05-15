@@ -1,3 +1,5 @@
+$promo_pic_bg_color: #000145;
+
 .promo {
   @include wrapper-outer;
   padding-bottom: 120px;
@@ -103,6 +105,7 @@
 }
 
 .promo__pic {
+  background-color: $promo_pic_bg_color;
   img {
     height: 100%;
     object-fit: cover;
