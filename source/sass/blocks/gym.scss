@@ -68,6 +68,8 @@ $gym_tablet_video_height: 167px;
 
 .gym__play-btn {
   margin: auto;
+
+  cursor: pointer;
 }
 
 @media (max-width: $tablet_max_width) {
