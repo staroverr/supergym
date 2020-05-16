@@ -11,7 +11,7 @@ $subscr_tablet_bg_pic_bottom: -23px;
 $subscr_tablet_card_padding: 163px - $tablet_layout_padding;
 $subscr_tablet_card_gutter: 40px;
 
-$subscr_mobile_card_height: 384px;
+$subscr_mobile_card_height: 380px;
 
 .subscr {
   @include wrapper-outer;
@@ -254,7 +254,7 @@ $subscr_mobile_card_height: 384px;
   }
 
   .subscr__card {
-    padding: 50px 0 55px;
+    padding: 45px 0 55px;
     min-height: $subscr_mobile_card_height;
 
     h3 {

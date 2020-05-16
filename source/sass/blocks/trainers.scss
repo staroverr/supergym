@@ -173,10 +173,21 @@ $slider_mobile_btn_gutter: 22px;
     margin: 0 $slider_mobile_btn_gutter;
   }
 
+  .trainers__item {
+    &:hover > h3 {
+      transform: translateY(-180px);
+    }
+  }
+
   .trainers__pic {
     img {
       width: 226px;
+      height: 274px;
     }
+  }
+
+  .trainers__info {
+    padding: 67px 35px 40px;
   }
 }
 
