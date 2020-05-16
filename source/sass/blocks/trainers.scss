@@ -5,9 +5,10 @@ $slider_btn_gutter: 40px;
 $slider_desktop_slide_gutter: 40px;
 $slider_tablet_slide_gutter: 30px;
 
-$slider_mobile_btn_width: 10px;
-$slider_mobile_btn_height: 19px;
-$slider_mobile_btn_gutter: 22px;
+$slider_mobile_btn_svg_width: 10px;
+$slider_mobile_btn_svg_height: 19px;
+$slider_mobile_btn_padding: 15px;
+$slider_mobile_btn_gutter: 7px;
 
 .trainers {
   @include wrapper-outer;
@@ -158,18 +159,23 @@ $slider_mobile_btn_gutter: 22px;
     padding-bottom: 70px;
   }
 
+  .trainers__slider {
+    margin: 0 -#{$slider_mobile_btn_padding};
+  }
+
   .trainers__slider-control {
-    width: $slider_mobile_btn_width;
-    height: $slider_mobile_btn_height;
+    width: auto;
+    height: auto;
+    padding: $slider_mobile_btn_padding;
 
     svg {
-      width: 100%;
-      height: 100%;
+      width: $slider_mobile_btn_svg_width;
+      height: $slider_mobile_btn_svg_height;
     }
   }
 
   .trainers__slider-wrapper {
-    width: $mobile-content-width - 2 * ($slider_mobile_btn_width + $slider_mobile_btn_gutter);
+    width: 226px;
     margin: 0 $slider_mobile_btn_gutter;
   }
 
