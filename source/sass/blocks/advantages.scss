@@ -91,6 +91,23 @@ $adv_tablet_major_item_width: 442px;
 
 .advantages__number {
   font: bold 71px/54px $roboto;
+  color: transparent;
+
+  &--900 {
+    background: url("../../img/900.svg") center no-repeat;
+  }
+
+  &--70 {
+    background: url("../../img/70.svg") center no-repeat;
+  }
+
+  &--350 {
+    background: url("../../img/350.svg") center no-repeat;
+  }
+
+  &--5 {
+    background: url("../../img/5+.svg") center no-repeat;
+  }
 }
 
 .advantages__unit {
@@ -175,6 +192,22 @@ $adv_tablet_major_item_width: 442px;
 
   .advantages__number {
     font: bold 58px/54px $roboto;
+
+    &--900 {
+      background-size: 89px 40px;
+    }
+
+    &--70 {
+      background-size: 59px 40px;
+    }
+
+    &--350 {
+      background-size: 89px 40px;
+    }
+
+    &--5 {
+      background-size: 57px 40px;
+    }
   }
 
   .advantages__major-item {
