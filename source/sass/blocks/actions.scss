@@ -1,0 +1,271 @@
+$actions_primary_height: 462px;
+$actions_desktop_gutter: 40px;
+
+$actions_tablet_gutter: 30px;
+$actions_secondary_tablet_height: 211px;
+
+$actions_mobile_primary_height: 598px;
+$actions_mobile_primary_content_height: 299px;
+$actions_mobile_secondary_height: 211px;
+
+.actions {
+  @include wrapper-outer;
+
+  padding: 120px 0;
+}
+
+.actions__wrapper {
+  @include wrapper-inner;
+
+  h2 {
+    margin: 0 0 55px;
+
+    @include h2-heading;
+    text-align: center;
+  }
+}
+
+.actions__container {
+  min-height: $actions_primary_height;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions__primary {
+  width: calc(50% - #{$actions_desktop_gutter} / 2);
+  height: $actions_primary_height;
+
+  background: url("../../img/sportswoman.jpg") right no-repeat;
+  background-size: contain;
+}
+
+.actions__prim-content {
+  box-sizing: border-box;
+  padding: 33px 45px 45px;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: $actions_bg_color;
+  color: $white;
+
+  p {
+    margin: 0 0 auto;
+    max-width: 100%;
+
+    font: 18px/140% $roboto;
+  }
+
+  a {
+    padding: 1px 0;
+    position: relative;
+
+    font: bold 14px/16px $roboto;
+    letter-spacing: 0.05em;
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+
+      content: "";
+      background-color: $white;
+      transition: 0.2s;
+    }
+
+    &:hover::before {
+      height: 3px;
+    }
+  }
+}
+
+.actions__prim-text {
+  font: bold 28px/150% $roboto;
+}
+
+.actions__prim-text-major {
+  margin-bottom: 20px;
+
+  font: bold 70px/92% $roboto;
+}
+
+.actions__secondary {
+  width: calc(50% - #{$actions_desktop_gutter} / 2);
+  height: $actions_primary_height;
+}
+
+.actions__sec-item {
+  box-sizing: border-box;
+  min-height: calc(50% - #{$actions_desktop_gutter} / 2);
+  padding: 18px 28px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: $blue_alt_color;
+  border-width: 7px;
+  border-style: solid;
+  border-image-source: linear-gradient(to bottom right, $border_gradient_start_color, $border_gradient_end_color);
+  border-image-slice: 1;
+
+  &:first-child {
+    margin-bottom: $actions_desktop_gutter;
+  }
+
+  h3 {
+    margin: 0 0 3px;
+
+    font: bold 26px/150% $roboto;
+  }
+
+  p {
+    margin: 0 0 auto;
+    min-height: 90px;
+    align-self: stretch;
+
+    font: 16px/140% $roboto;
+  }
+
+  a {
+    margin-top: auto;
+    padding: 1px 0;
+    position: relative;
+
+    font: bold 12px/14px $roboto;
+    letter-spacing: 0.05em;
+    color: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+
+      content: "";
+      background-color: $blue_alt_color;
+      transition: 0.2s;
+    }
+
+    &:hover::before {
+      height: 3px;
+    }
+  }
+}
+
+@media (max-width: $tablet_max_width) {
+  .actions {
+    padding: 100px 0;
+  }
+
+  .actions__wrapper {
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .actions__container {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+
+  .actions__primary {
+    width: 100%;
+    margin-bottom: $actions_tablet_gutter;
+
+    background: url("../../img/sportswoman-tablet.jpg") right no-repeat;
+  }
+
+  .actions__prim-content {
+    width: 279px;
+    padding: 33px 45px 45px;
+  }
+
+  .actions__secondary {
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: $actions_secondary_tablet_height;
+  }
+
+  .actions__sec-item {
+    min-width: calc(50% - #{$actions_tablet_gutter} / 2);
+    min-height: 0;
+    height: 100%;
+
+    &:first-child {
+      margin-bottom: 0;
+      margin-right: $actions_tablet_gutter;
+    }
+  }
+}
+
+@media (max-width: $mobile_max_width) {
+  .actions {
+    padding: 70px 0;
+  }
+
+  .actions__wrapper {
+    h2 {
+      margin-bottom: 50px;
+    }
+  }
+
+  .actions__container {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+
+  .actions__primary {
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: $actions_mobile_primary_height - $actions_mobile_primary_content_height;
+    min-height: $actions_mobile_primary_height;
+    margin-bottom: $actions_tablet_gutter;
+
+    background: url("../../img/sportswoman-mobile.jpg") bottom no-repeat;
+  }
+
+  .actions__prim-content {
+    width: 100%;
+    padding: 33px 45px 45px;
+    align-items: center;
+    height: auto;
+    min-height: $actions_mobile_primary_content_height;
+  }
+
+  .actions__secondary {
+    flex-direction: column;
+    min-height: $actions_secondary_tablet_height;
+  }
+
+  .actions__sec-item {
+    min-width: 0;
+    width: 100%;
+    min-height: $actions_mobile_secondary_height;
+    height: 100%;
+    align-items: center;
+
+    &:first-child {
+      margin-bottom: $actions_tablet_gutter;
+      margin-right: 0;
+    }
+
+    p {
+      align-self: center;
+      min-height: 50px;
+
+      text-align: center;
+    }
+  }
+}
