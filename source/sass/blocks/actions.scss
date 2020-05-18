@@ -170,7 +170,7 @@ $actions_mobile_secondary_height: 211px;
 
   .actions__wrapper {
     h2 {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
   }
 
@@ -217,7 +217,7 @@ $actions_mobile_secondary_height: 211px;
 
   .actions__wrapper {
     h2 {
-      margin-bottom: 50px;
+      margin-bottom: 44px;
     }
   }
 
@@ -242,6 +242,10 @@ $actions_mobile_secondary_height: 211px;
     align-items: center;
     height: auto;
     min-height: $actions_mobile_primary_content_height;
+
+    p {
+      text-align: center;
+    }
   }
 
   .actions__secondary {
@@ -250,6 +254,7 @@ $actions_mobile_secondary_height: 211px;
   }
 
   .actions__sec-item {
+    padding: 27px 28px 40px;
     min-width: 0;
     width: 100%;
     min-height: $actions_mobile_secondary_height;

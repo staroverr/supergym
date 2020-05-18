@@ -54,10 +54,11 @@
 (function () {
   function initSlider(section) {
     var sliderSection = document.querySelector(section); // основный элемент блока
-    var sliderInner = sliderSection.querySelector('.slider__inner'); // обёртка для трансформации .slider-item
+    var sliderWrapper = sliderSection.querySelector('.slider__wrapper'); // обертка для элементов слайдера
+    var sliderInner = sliderSection.querySelector('.slider__inner'); // динамический блок слайдера
     var sliderItems = sliderSection.querySelectorAll('.slider__item'); // элементы (.slider-item)
     var sliderControls = sliderSection.querySelectorAll('.slider__control'); // элементы управления
-    var wrapperWidth = parseFloat(getComputedStyle(sliderInner).width); // ширина обёртки
+    var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width); // ширина обёртки
     var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width); // ширина одного элемента
     var itemsGutter = parseFloat(getComputedStyle(sliderItems[0]).marginRight); // ширина отступа между элементами
     var itemsPerView = (wrapperWidth - itemWidth) / (itemWidth + itemsGutter) + 1; // количество видимых элементов
@@ -160,5 +161,6 @@
   }
 
   initSlider('.trainers');
+  initSlider('.reviews');
 }());
 
