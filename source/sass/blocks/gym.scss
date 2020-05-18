@@ -140,8 +140,9 @@ $gym_tablet_video_height: 167px;
   }
 
   .gym__pic {
-    @include no-wrapper-mobile-at-fluid;
+    margin: 0 -#{$mobile_layout_padding};
     margin-bottom: 40px;
+    flex-shrink: 0;
 
     img {
       width: 100%;
@@ -150,9 +151,10 @@ $gym_tablet_video_height: 167px;
   }
 
   .gym__video {
-    @include no-wrapper-mobile-at-fluid;
+    margin: 0 -#{$mobile_layout_padding};
+    width: 100vw;
     height: 167px;
-    position: relative;
+    position: static;
     left: auto;
     transform: translateX(0);
     bottom: auto;
