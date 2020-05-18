@@ -1,5 +1,7 @@
 $gym_desktop_img_width: 660px;
 $gym_desktop_content_width: $desktop_content_width - $gym_desktop_img_width;
+$gym_desktop_video_width: 364px;
+$gym_desktop_video_height: 228px;
 
 $gym_pic_bg_color: #b8b8b8;
 
@@ -51,14 +53,14 @@ $gym_tablet_video_height: 167px;
   position: absolute;
   left: $gym_desktop_video_xcoord;
   bottom: -115px;
+  width: $gym_desktop_video_width;
+  height: $gym_desktop_video_height;
 
-  background-color: $gym_pic_bg_color;
+  background: $gym_pic_bg_color url("../img/video-preview.jpg") no-repeat;
+  background-size: cover;
 }
 
 .gym__screen-play {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   display: flex;
