@@ -1,4 +1,6 @@
-$promo_pic_bg_color: #000145;
+$promo_desktop_content_width: 500px;
+$promo_tablet_content_width: 292px;
+$promo_mobile_img_height: 292px;
 
 .promo {
   @include wrapper-outer;
@@ -6,20 +8,21 @@ $promo_pic_bg_color: #000145;
 }
 
 .promo__wrapper {
-  @include wrapper-inner(true);
-  display: flex;
+  @include wrapper-inner;
 
-  background-color: $btn_gradient_start_color;
+  background: $promo_pic_bg_color url("../../img/powder.jpg") right center no-repeat;
+  background-size: 660px auto;
 }
 
 .promo__content {
-  flex-grow: 1;
+  width: $promo_desktop_content_width;
   box-sizing: border-box;
   padding: 82px 78px 86px;
   display: flex;
   flex-direction: column;
 
   color: $white;
+  background-color: $btn_gradient_start_color;
 
   p {
     margin: 0 0 auto;
@@ -118,7 +121,12 @@ $promo_pic_bg_color: #000145;
     padding-bottom: 100px;
   }
 
+  .promo__wrapper {
+    background-size: 386px auto;
+  }
+
   .promo__content {
+    width: $promo_tablet_content_width;
     padding: 51px 45px 51px;
 
     p {
@@ -180,11 +188,10 @@ $promo_pic_bg_color: #000145;
   }
 
   .promo__wrapper {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
+    padding-bottom: $promo_mobile_img_height;
 
-    background-clip: content-box;
+    background-position: center bottom;
+    background-size: auto $promo_mobile_img_height;
   }
 
   .promo__content {
