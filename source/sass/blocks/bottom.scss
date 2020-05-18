@@ -1,0 +1,18 @@
+.bottom {
+  display: flex;
+  width: 100%;
+}
+
+.bottom__column {
+  width: 50%;
+}
+
+@media (max-width: $tablet_max_width) {
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom__column {
+    width: 100%;
+  }
+}

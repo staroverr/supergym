@@ -1,0 +1,123 @@
+$form_desktop_content_width: 410px;
+$form_inner_gap: 30px;
+
+$form_tablet_content_width: 472px;
+$form_tablet_input_gap: 60px;
+
+.form {
+  padding: 65px 0;
+
+  background-color: $form_bg_color;
+  color: $white;
+}
+
+.form__wrapper {
+  margin: 0 170px 0 auto;
+  width: $form_desktop_content_width;
+
+  h2 {
+    margin: 0 0 44px;
+
+    @include h2-heading;
+  }
+}
+
+.form__form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__label {
+  flex: 1 1 auto;
+
+  &--name {
+    margin-right: $form_inner_gap;
+  }
+}
+
+.form__input {
+  width: 100%;
+  padding: 5px 0;
+
+  font: 14px/16px $roboto;
+  color: $white;
+  background-color: $form_bg_color;
+  border: none;
+  border-bottom: 1px solid #74819c;
+
+  &::placeholder {
+    font: 14px/16px $roboto;
+    color: $white;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $white;
+  }
+}
+
+.form__submit {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $form_inner_gap;
+
+  font: bold 14px/16px $roboto;
+  letter-spacing: 0.05em;
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid $white;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    border-width: 10px;
+    background-color: $white;
+    color: $blue_alt_color;
+  }
+}
+
+@media (max-width: $tablet_max_width) {
+  .form__wrapper {
+    width: $form_tablet_content_width;
+    margin: 0 auto;
+  }
+
+  .form__label--name {
+    margin-right: $form_tablet_input_gap;
+  }
+}
+
+@media (max-width: $mobile_max_width) {
+  .form {
+    padding: 69px 0 67px;
+  }
+
+  .form__wrapper {
+    @include wrapper-inner;
+    width: auto;
+
+    h2 {
+      margin-bottom: 37px;
+    }
+  }
+
+  .form__label {
+    flex: 1 1 100%;
+
+    &--name {
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+  }
+
+  .form__submit {
+    margin-top: 40px;
+  }
+}
