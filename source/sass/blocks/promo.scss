@@ -16,6 +16,7 @@ $promo_mobile_img_height: 292px;
 
 .promo__content {
   width: $promo_desktop_content_width;
+  min-height: $promo_desktop_content_width;
   box-sizing: border-box;
   padding: 82px 78px 86px;
   display: flex;
@@ -26,6 +27,7 @@ $promo_mobile_img_height: 292px;
 
   p {
     margin: 0 0 auto;
+    min-height: 63px;
     padding-bottom: 10px;
 
     font: 18px/150% $roboto;
@@ -122,15 +124,19 @@ $promo_mobile_img_height: 292px;
   }
 
   .promo__wrapper {
+    padding-right: 5px;
+
     background-size: 386px auto;
   }
 
   .promo__content {
     width: $promo_tablet_content_width;
+    min-height: $promo_tablet_content_width;
     padding: 51px 45px 51px;
 
     p {
       font: 12px/150% $roboto;
+      min-height: 35px;
     }
   }
 
@@ -189,6 +195,7 @@ $promo_mobile_img_height: 292px;
 
   .promo__wrapper {
     padding-bottom: $promo_mobile_img_height;
+    padding-right: 0;
 
     background-position: center bottom;
     background-size: auto $promo_mobile_img_height;
@@ -203,8 +210,6 @@ $promo_mobile_img_height: 292px;
     justify-content: center;
 
     p {
-      margin-bottom: 17px;
-
       font: 12px/150% $roboto;
     }
   }

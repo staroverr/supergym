@@ -2,7 +2,7 @@ $contacts_desktop_content_width: 464px;
 $contacts_tablet_content_width: 502px;
 
 .contacts {
-  padding: 65px 0;
+  padding: 65px 0 50px;
 
   border-top: 1px solid #74819c;
 }
@@ -54,7 +54,7 @@ $contacts_tablet_content_width: 502px;
 
 @media (max-width: $tablet_max_width) {
   .contacts {
-    padding: 65px 0 64px;
+    padding: 70px 0 64px;
 
     border-top: none;
   }
@@ -71,6 +71,7 @@ $contacts_tablet_content_width: 502px;
   .contacts__list {
     column-gap: 97px;
     width: 106%;
+    margin-bottom: -20px;
   }
 
   .contacts__item {
@@ -90,7 +91,7 @@ $contacts_tablet_content_width: 502px;
 
 @media (max-width: $mobile_max_width) {
   .contacts {
-    padding: 68px 0 44px;
+    padding: 68px 0 63px;
   }
 
   .contacts__wrapper {

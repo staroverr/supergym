@@ -3,16 +3,23 @@
   justify-content: center;
 }
 
-@mixin wrapper-inner ($fluid: false) {
+@mixin wrapper-inner ($fluid_mobile: false, $fluid_tablet: false) {
   max-width: $desktop_content_width;
   width: 100%;
 
   @media (max-width: $tablet_max_width) {
-    max-width: $tablet_content_width;
+    @if ($fluid_tablet) {
+      max-width: none;
+      padding: 0 $tablet_layout_padding;
+    }
+
+    @else {
+      max-width: $tablet_content_width;
+    }
   }
 
   @media (max-width: $mobile_max_width) {
-    @if ($fluid) {
+    @if ($fluid_mobile) {
       max-width: none;
       padding: 0 $mobile_layout_padding;
     }

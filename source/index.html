@@ -54,6 +54,8 @@
             несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
         <picture class="gym__pic">
+          <source  media="(max-width: 767px)" type="image/webp" srcset="img/gym-mobile.webp 1x, img/gym-mobile-2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/gym-mobile.jpg 1x, img/gym-mobile-2x.jpg 2x">
           <source type="image/webp" srcset="img/gym.webp 1x, img/gym-2x.webp 2x">
           <img width="660" height="401" src="img/gym.jpg" srcset="img/gym-2x.jpg 2x" alt="Фото тренажёрного зала">
         </picture>
@@ -515,6 +517,35 @@
         </div>
       </section>
     </div>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a href="#" class="footer__logo">Supergym</a>
+        <ul class="footer__menu">
+          <li><a href="" class="footer__menu-link">Услуги</a></li>
+          <li><a href="" class="footer__menu-link">Абонементы</a></li>
+          <li><a href="" class="footer__menu-link">Акции</a></li>
+          <li><a href="" class="footer__menu-link">Тренеры</a></li>
+          <li><a href="" class="footer__menu-link">Расписание</a></li>
+        </ul>
+        <ul class="footer__social">
+          <li><a href="#" class="footer__social-link footer__social-link--vk" aria-label="Ссылка на Vkontakte">
+            <svg width="24" height="13">
+              <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+            </svg>
+          </a></li>
+          <li><a href="#" class="footer__social-link footer__social-link--ig" aria-label="Ссылка на Instagram">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite_auto.svg#icon-ig"></use>
+            </svg>
+          </a></li>
+          <li><a href="#" class="footer__social-link footer__social-link--fb" aria-label="Ссылка на Facebook">
+            <svg width="12" height="24">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg>
+          </a></li>
+        </ul>
+      </div>
+    </footer>
   </main>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

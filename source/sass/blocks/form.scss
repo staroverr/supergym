@@ -5,7 +5,7 @@ $form_tablet_content_width: 472px;
 $form_tablet_input_gap: 60px;
 
 .form {
-  padding: 65px 0;
+  padding: 65px 0 42px;
 
   background-color: $form_bg_color;
   color: $white;
@@ -84,9 +84,18 @@ $form_tablet_input_gap: 60px;
 }
 
 @media (max-width: $tablet_max_width) {
+  .form {
+    padding: 71px 0 66px;
+  }
+
   .form__wrapper {
     width: $form_tablet_content_width;
+    padding-right: 32px;
     margin: 0 auto;
+
+    h2 {
+      margin-bottom: 33px;
+    }
   }
 
   .form__label--name {
@@ -102,6 +111,7 @@ $form_tablet_input_gap: 60px;
   .form__wrapper {
     @include wrapper-inner;
     width: auto;
+    padding-right: 0;
 
     h2 {
       margin-bottom: 37px;

@@ -164,3 +164,60 @@
   initSlider('.reviews');
 }());
 
+// DOM манипуляция на мобильной версии в подвале
+
+(function () {
+  var footer = document.querySelector('.footer');
+  var footerWrapper = document.querySelector('.footer__wrapper');
+  var logo = footer.querySelector('.footer__logo');
+  var menu = footer.querySelector('.footer__menu');
+  var MOBILE_WIDTH = 767;
+
+  function resideLogo() {
+    var logoClone = logo.cloneNode(true);
+
+    var addLogoToMenu = function () {
+      var newLi = document.createElement('li');
+
+      logoClone.classList.add('footer__logo--inlisted');
+      newLi.insertAdjacentElement('afterbegin', logoClone);
+      newLi = menu.insertBefore(newLi, menu.firstChild);
+    };
+
+    var removeLogoFromTopIfExists = function () {
+      logo = footer.querySelector('.footer__logo');
+      if (logo.parentNode.tagName === 'DIV') {
+        logo.remove();
+      }
+    };
+
+    var removeLogoFromMenuIfExists = function () {
+      var logoAtMenu = footer.querySelector('.footer__logo--inlisted');
+      if (logoAtMenu) {
+        logoAtMenu.parentNode.remove();
+      }
+    };
+
+    var addLogoAtTop = function () {
+      logo = footer.querySelector('.footer__logo');
+      if (!logo || logo.parentNode.tagName !== 'DIV') {
+        footerWrapper.insertBefore(logoClone, menu);
+      }
+    };
+
+    if (document.documentElement.clientWidth <= MOBILE_WIDTH) {
+      removeLogoFromMenuIfExists();
+      addLogoToMenu();
+      removeLogoFromTopIfExists();
+    } else {
+      removeLogoFromMenuIfExists();
+      addLogoAtTop();
+    }
+  }
+
+  resideLogo();
+
+  window.addEventListener('resize', function () {
+    resideLogo();
+  });
+})();
