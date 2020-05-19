@@ -38,6 +38,11 @@ $actions_mobile_secondary_height: 211px;
 
   background: url("../../img/sportswoman.jpg") right no-repeat;
   background-size: contain;
+
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background: url("../../img/sportswoman-2x.jpg") right no-repeat;
+    background-size: contain;
+  }
 }
 
 .actions__prim-content {
@@ -184,6 +189,11 @@ $actions_mobile_secondary_height: 211px;
     margin-bottom: $actions_tablet_gutter;
 
     background: url("../../img/sportswoman-tablet.jpg") right no-repeat;
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background: url("../../img/sportswoman-tablet-2x.jpg") right no-repeat;
+      background-size: 798px auto;
+    }
   }
 
   .actions__prim-content {
@@ -233,6 +243,11 @@ $actions_mobile_secondary_height: 211px;
     margin-bottom: $actions_tablet_gutter;
 
     background: url("../../img/sportswoman-mobile.jpg") bottom no-repeat;
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background: url("../../img/sportswoman-mobile-2x.jpg") bottom no-repeat;
+      background-size: 290px auto;
+    }
   }
 
   .actions__prim-content {

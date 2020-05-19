@@ -16,8 +16,13 @@ $superman_bg_color: #003d85;
   align-items: center;
 
   color: $white;
-  background: $header_bg_color url("../img/header-bg.jpg") no-repeat;
+  background: $header_bg_color url("../img/header-bg-2x.jpg") no-repeat;
   background-size: cover;
+
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background: $header_bg_color url("../img/header-bg-2x.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 
 .header__top {

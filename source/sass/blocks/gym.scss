@@ -58,6 +58,11 @@ $gym_tablet_video_height: 167px;
 
   background: $gym_pic_bg_color url("../img/video-preview.jpg") no-repeat;
   background-size: cover;
+
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background: $gym_pic_bg_color url("../img/video-preview-2x.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 
 .gym__screen-play {

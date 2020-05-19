@@ -18,6 +18,11 @@ $subscr_mobile_card_height: 380px;
   padding: 120px 0 240px;
   background: url("../img/barbell-disks.png") right calc((100% - #{$desktop_content_width}) / 2 + #{$subscr_desktop_bg_pic_right}) bottom $subscr_desktop_bg_pic_bottom no-repeat,
     linear-gradient(to top, transparent, transparent $subscr_desktop_grad_pos, $subscr_bg_color $subscr_desktop_grad_pos);
+
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    background-image: url("../img/barbell-disks-2x.png");
+    background-size: 470px auto;
+  }
 }
 
 .subscr__wrapper {
