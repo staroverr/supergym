@@ -222,8 +222,7 @@ $actions_mobile_secondary_height: 211px;
   }
 
   .actions__container {
-    justify-content: stretch;
-    flex-direction: column;
+    display: block;
   }
 
   .actions__primary {
@@ -245,6 +244,8 @@ $actions_mobile_secondary_height: 211px;
 
     p {
       text-align: center;
+
+      margin-bottom: 26px;
     }
   }
 
@@ -256,10 +257,10 @@ $actions_mobile_secondary_height: 211px;
   .actions__sec-item {
     padding: 27px 28px 40px;
     min-width: 0;
-    width: 100%;
     min-height: $actions_mobile_secondary_height;
-    height: 100%;
-    align-items: center;
+    display: block;
+
+    text-align: center;
 
     &:first-child {
       margin-bottom: $actions_tablet_gutter;
