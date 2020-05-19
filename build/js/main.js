@@ -187,14 +187,14 @@
     var removeLogoFromTopIfExists = function () {
       logo = footer.querySelector('.footer__logo');
       if (logo.parentNode.tagName === 'DIV') {
-        logo.remove();
+        logo.parentNode.removeChild(logo);
       }
     };
 
     var removeLogoFromMenuIfExists = function () {
       var logoAtMenu = footer.querySelector('.footer__logo--inlisted');
       if (logoAtMenu) {
-        logoAtMenu.parentNode.remove();
+        logoAtMenu.parentNode.parentNode.removeChild(logoAtMenu.parentNode);
       }
     };
 
