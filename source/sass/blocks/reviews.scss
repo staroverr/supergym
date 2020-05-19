@@ -71,7 +71,8 @@ $rev_mobile_img_height: 68px;
 
 .reviews__item {
   box-sizing: border-box;
-  flex: 0 0 $rev_desktop_slider_width;
+  flex-shrink: 0;
+  width: $rev_desktop_slider_width;
   min-height: 100%;
   padding: 60px 62px 57px;
   margin-right: $rev_slider_gutter;
@@ -133,7 +134,7 @@ $rev_mobile_img_height: 68px;
 
   .reviews__item {
     box-sizing: border-box;
-    flex: 0 0 $rev_tablet_slider_width;
+    width: $rev_tablet_slider_width;
     min-height: 100%;
     padding: 60px 62px 57px;
     margin-right: $rev_slider_gutter;
@@ -182,7 +183,7 @@ $rev_mobile_img_height: 68px;
   }
 
   .reviews__item {
-    flex: 0 0 $rev_mobile_slider_width;
+    width: $rev_mobile_slider_width;
     padding: 40px 25px 37px;
     flex-direction: column;
 
