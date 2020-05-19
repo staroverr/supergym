@@ -30,9 +30,10 @@
           <li>Групповые занятия</li>
           <li>Кардио-зона</li>
         </ul>
-        <a class="header__btn" href="#">Купить абонемент</a>
+        <a class="header__btn" href="#subscribe">Купить абонемент</a>
       </div>
       <picture class="header__pic">
+        <!-- 1х: 500px; 2x: 1000px -->
         <source type="image/webp" srcset="img/superman.webp 1x, img/superman-2x.webp 2x">
         <img width="500" height="556" src="img/superman.jpg" srcset="img/superman-2x.jpg 2x" alt="Фото супермена">
       </picture>
@@ -58,7 +59,9 @@
             несколько оборудованных залов для различных видов групповых занятий.</p>
         </div>
         <picture class="gym__pic">
+          <!-- 1х: 320px; 2x: 640px -->
           <source media="(max-width: 767px)" type="image/webp" srcset="img/gym-mobile.webp 1x, img/gym-mobile-2x.webp 2x">
+          <!-- 1х: 660px; 2x: 1320px -->
           <source media="(max-width: 767px)" srcset="img/gym-mobile.jpg 1x, img/gym-mobile-2x.jpg 2x">
           <source type="image/webp" srcset="img/gym.webp 1x, img/gym-2x.webp 2x">
           <img width="660" height="401" src="img/gym.jpg" srcset="img/gym-2x.jpg 2x" alt="Фото тренажёрного зала">
@@ -84,7 +87,7 @@
         </div>
       </div>
     </section>
-    <section class="subscr">
+    <section class="subscr" id="subscribe">
       <div class="subscr__wrapper">
         <h2>Абонементы</h2>
         <ul class="subscr__tab-list">
@@ -173,10 +176,13 @@
           <div class="trainers__slider-wrapper slider__wrapper">
             <ul class="trainers__list slider__inner">
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer1.webp 1x, img/trainer1-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer1.jpg" srcset="img/trainer1-2x.jpg 2x" alt="Анна Павлова">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer1.webp 1x, img/trainer1-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer1.jpg" srcset="img/trainer1-2x.jpg 2x" alt="Анна Павлова">
+                  </picture>
+                </div>
                 <h3>Анна Павлова</h3>
                 <div class="trainers__info">
                   <span>Фитнес</span>
@@ -188,10 +194,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer2.webp 1x, img/trainer2-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer2.jpg" srcset="img/trainer2-2x.jpg 2x" alt="Алексей Лавров">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer2.webp 1x, img/trainer2-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer2.jpg" srcset="img/trainer2-2x.jpg 2x" alt="Алексей Лавров">
+                  </picture>
+                </div>
                 <h3>Алексей Лавров</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -203,10 +212,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer3.webp 1x, img/trainer3-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer3.jpg" srcset="img/trainer3-2x.jpg 2x" alt="Александр Пашков">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer3.webp 1x, img/trainer3-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer3.jpg" srcset="img/trainer3-2x.jpg 2x" alt="Александр Пашков">
+                  </picture>
+                </div>
                 <h3>Александр Пашков</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -218,10 +230,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer4.webp 1x, img/trainer4-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer4.jpg" srcset="img/trainer4-2x.jpg 2x" alt="Мария Кетова">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer4.webp 1x, img/trainer4-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer4.jpg" srcset="img/trainer4-2x.jpg 2x" alt="Мария Кетова">
+                  </picture>
+                </div>
                 <h3>Мария Кетова</h3>
                 <div class="trainers__info">
                   <span>Фитнес</span>
@@ -233,10 +248,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer2.webp 1x, img/trainer2-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer2.jpg" srcset="img/trainer2-2x.jpg 2x" alt="Семён Иванов">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer2.webp 1x, img/trainer2-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer2.jpg" srcset="img/trainer2-2x.jpg 2x" alt="Семён Иванов">
+                  </picture>
+                </div>
                 <h3>Семён Иванов</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -248,10 +266,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer1.webp 1x, img/trainer1-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer1.jpg" srcset="img/trainer1-2x.jpg 2x" alt="Ирина Александрова">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer1.webp 1x, img/trainer1-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer1.jpg" srcset="img/trainer1-2x.jpg 2x" alt="Ирина Александрова">
+                  </picture>
+                </div>
                 <h3>Ирина Александрова</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -263,10 +284,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer3.webp 1x, img/trainer3-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer3.jpg" srcset="img/trainer3-2x.jpg 2x" alt="Василий Уткин">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer3.webp 1x, img/trainer3-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer3.jpg" srcset="img/trainer3-2x.jpg 2x" alt="Василий Уткин">
+                  </picture>
+                </div>
                 <h3>Василий Уткин</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -278,10 +302,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer1.webp 1x, img/trainer1-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer1.jpg" srcset="img/trainer1-2x.jpg 2x" alt="Анна Василевская">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer1.webp 1x, img/trainer1-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer1.jpg" srcset="img/trainer1-2x.jpg 2x" alt="Анна Василевская">
+                  </picture>
+                </div>
                 <h3>Анна Василевская</h3>
                 <div class="trainers__info">
                   <span>Фитнес</span>
@@ -293,10 +320,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer4.webp 1x, img/trainer4-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer4.jpg" srcset="img/trainer4-2x.jpg 2x" alt="Светлана Петрова">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer4.webp 1x, img/trainer4-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer4.jpg" srcset="img/trainer4-2x.jpg 2x" alt="Светлана Петрова">
+                  </picture>
+                </div>
                 <h3>Светлана Петрова</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -308,10 +338,13 @@
                 </div>
               </li>
               <li class="trainers__item slider__item">
-                <picture class="trainers__pic">
-                  <source type="image/webp" srcset="img/trainer3.webp 1x, img/trainer3-2x.webp 2x">
-                  <img width="260" height="294" src="img/trainer3.jpg" srcset="img/trainer3-2x.jpg 2x" alt="Алексей Кириллов">
-                </picture>
+                <div class="trainers__pic">
+                  <picture>
+                    <!-- 1х: 260px; 2x: 520px -->
+                    <source type="image/webp" srcset="img/trainer3.webp 1x, img/trainer3-2x.webp 2x">
+                    <img width="260" height="294" src="img/trainer3.jpg" srcset="img/trainer3-2x.jpg 2x" alt="Алексей Кириллов">
+                  </picture>
+                </div>
                 <h3>Алексей Кириллов</h3>
                 <div class="trainers__info">
                   <span>CrossFit</span>
@@ -424,6 +457,7 @@
             <ul class="reviews__list slider__inner">
               <li class="reviews__item slider__item">
                 <picture>
+                  <!-- 1х: 80px; 2x: 160px -->
                   <source type="image/webp" srcset="img/reviewer1.webp 1x, img/reviewer1-2x.webp 2x">
                   <img width="80" height="80" src="img/reviewer1.png" srcset="img/reviewer1-2x.png 2x" alt="Анна Орлова">
                 </picture>
@@ -436,6 +470,7 @@
               </li>
               <li class="reviews__item slider__item">
                 <picture>
+                  <!-- 1х: 80px; 2x: 160px -->
                   <source type="image/webp" srcset="img/reviewer1.webp 1x, img/reviewer1-2x.webp 2x">
                   <img width="80" height="80" src="img/reviewer1.png" srcset="img/reviewer1-2x.png 2x" alt="Валентина Сидорова">
                 </picture>
@@ -448,6 +483,7 @@
               </li>
               <li class="reviews__item slider__item">
                 <picture>
+                  <!-- 1х: 80px; 2x: 160px -->
                   <source type="image/webp" srcset="img/reviewer1.webp 1x, img/reviewer1-2x.webp 2x">
                   <img width="80" height="80" src="img/reviewer1.png" srcset="img/reviewer1-2x.png 2x" alt="Виктория Сапогова">
                 </picture>

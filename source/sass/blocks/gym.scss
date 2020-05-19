@@ -45,7 +45,7 @@ $gym_tablet_video_height: 167px;
   font: 300 16px/150% $roboto;
 }
 
-.gym__pic {
+.gym__pic img {
   background-color: $gym_pic_bg_color;
 }
 
@@ -106,11 +106,9 @@ $gym_tablet_video_height: 167px;
     }
   }
 
-  .gym__pic {
-    img {
-      width: 100%;
-      height: 345px;
-    }
+  .gym__pic img {
+    width: 100%;
+    height: 345px;
   }
 
   .gym__video {
@@ -145,14 +143,11 @@ $gym_tablet_video_height: 167px;
   }
 
   .gym__pic {
-    margin: 0 -#{$mobile_layout_padding};
-    width: calc(100% + 30px);
-    margin-bottom: 40px;
-    flex-shrink: 0;
-
     img {
-      width: 100%;
+      margin: 0 -#{$mobile_layout_padding};
       height: auto;
+      width: calc(100% + 30px);
+      margin-bottom: 40px;
     }
   }
 

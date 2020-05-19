@@ -18,6 +18,10 @@
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .footer__menu {
@@ -39,6 +43,10 @@
   font: 14px/16px $roboto;
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .footer__social {
@@ -51,6 +59,10 @@
 
   li:not(:last-child) {
     margin-right: 25px;
+  }
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 

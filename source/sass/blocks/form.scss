@@ -51,7 +51,8 @@ $form_tablet_input_gap: 60px;
     color: $white;
   }
 
-  &:focus {
+  &:focus,
+  &:hover {
     outline: none;
     border-color: $white;
   }
