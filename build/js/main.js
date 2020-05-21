@@ -57,9 +57,10 @@
     var sliderWrapper = sliderSection.querySelector('.slider__wrapper'); // обертка для элементов слайдера
     var sliderInner = sliderSection.querySelector('.slider__inner'); // динамический блок слайдера
     var sliderItems = sliderSection.querySelectorAll('.slider__item'); // элементы (.slider-item)
+    // console.log(sliderItems[0].offsetWidth);
     var sliderControls = sliderSection.querySelectorAll('.slider__control'); // элементы управления
     var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width); // ширина обёртки
-    var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width); // ширина одного элемента
+    var itemWidth = sliderItems[0].offsetWidth; // ширина одного элемента
     var itemsGutter = parseFloat(getComputedStyle(sliderItems[0]).marginRight); // ширина отступа между элементами
     var itemsPerView = (wrapperWidth - itemWidth) / (itemWidth + itemsGutter) + 1; // количество видимых элементов
     var leftItemPosition = 0; // позиция левого активного элемента
