@@ -7,17 +7,17 @@
   var tabList = section.querySelector('.subscr__tab-list');
   var tabs = section.querySelectorAll('.subscr__tab');
   var content = {
-    '1 месяц': {
+    oneMonth: {
       trainer: 5000,
       day: 1700,
       fullday: 2700
     },
-    '6 месяцев': {
+    sixMonths: {
       trainer: 25000,
       day: 9000,
       fullday: 15000
     },
-    '12 месяцев': {
+    twelveMonths: {
       trainer: 45000,
       day: 16000,
       fullday: 25000
@@ -33,12 +33,12 @@
     });
   }
 
-  function toggleTabs(evt) {
+  function toggvarabs(evt) {
     tabs.forEach(function (t) {
       if (!evt.target.classList.contains('subscr__tab--active') && evt.target === t) {
         deactivateAllTabs(tabs);
         t.classList.add('subscr__tab--active');
-        var tabName = t.textContent;
+        var tabName = t.dataset.name;
         Object.keys(content[tabName]).forEach(function (item) {
           var card = section.querySelector('.subscr__card--' + item);
           card.querySelector('.subscr__number').textContent = card.querySelector('.subscr__price-replica').textContent = content[tabName][item];
@@ -46,7 +46,7 @@
       }
     });
   }
-  tabList.addEventListener('click', toggleTabs);
+  tabList.addEventListener('click', toggvarabs);
 })();
 
 // slider
