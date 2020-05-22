@@ -52,7 +52,7 @@ $gym_tablet_video_height: 167px;
 .gym__video {
   position: absolute;
   left: $gym_desktop_video_xcoord;
-  bottom: -115px;
+  top: 290px;
   width: $gym_desktop_video_width;
   height: $gym_desktop_video_height;
 
@@ -77,6 +77,15 @@ $gym_tablet_video_height: 167px;
   margin: auto;
 
   cursor: pointer;
+
+  path {
+    transition: 0.1s;
+
+    &:hover {
+      stroke-width: 5px;
+      stroke: $white;
+    }
+  }
 }
 
 @media (max-width: $tablet_max_width) {
@@ -117,10 +126,7 @@ $gym_tablet_video_height: 167px;
     left: 50%;
     transform: translateX(-50%);
     bottom: -83px;
-  }
-
-  .gym__play-btn {
-    transform: scale(0.73);
+    top: auto;
   }
 }
 
