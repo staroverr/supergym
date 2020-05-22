@@ -20,7 +20,8 @@ $subscr_mobile_card_height: 380px;
     linear-gradient(to top, transparent, transparent $subscr_desktop_grad_pos, $subscr_bg_color $subscr_desktop_grad_pos);
 
   @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
-    background-image: url("../img/barbell-disks-2x.png");
+    background: url("../img/barbell-disks-2x.png") right calc((100% - #{$desktop_content_width}) / 2 + #{$subscr_desktop_bg_pic_right}) bottom $subscr_desktop_bg_pic_bottom no-repeat,
+      linear-gradient(to top, transparent, transparent $subscr_desktop_grad_pos, $subscr_bg_color $subscr_desktop_grad_pos);
     background-size: 470px auto;
   }
 }
@@ -197,11 +198,17 @@ $subscr_mobile_card_height: 380px;
   .subscr {
     padding: 100px 0 200px;
 
-    background: url("../img/barbell-disks-tablet.png") right $subscr_tablet_bg_pic_right bottom $subscr_tablet_bg_pic_bottom no-repeat,
+    background: $subscr_bg_color url("../img/barbell-disks-tablet.png") right $subscr_tablet_bg_pic_right bottom $subscr_tablet_bg_pic_bottom no-repeat,
       linear-gradient(to top, transparent, transparent $subscr_tablet_grad_pos, $subscr_bg_color $subscr_tablet_grad_pos);
 
     h2 {
       margin-bottom: 30px;
+    }
+
+    @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+      background: $subscr_bg_color url("../img/barbell-disks-tablet-2x.png") right $subscr_tablet_bg_pic_right bottom $subscr_tablet_bg_pic_bottom no-repeat,
+        linear-gradient(to top, transparent, transparent $subscr_tablet_grad_pos, $subscr_bg_color $subscr_tablet_grad_pos);
+      background-size: 423px auto;
     }
   }
 
