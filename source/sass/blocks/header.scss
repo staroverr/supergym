@@ -27,6 +27,7 @@ $superman_bg_color: #003d85;
 
 .header__top {
   padding-top: 30px;
+  position: relative;
 
   @include wrapper-inner;
   display: flex;
@@ -36,13 +37,23 @@ $superman_bg_color: #003d85;
 }
 
 .header__contacts {
+  position: absolute;
+  right: 0;
+  top: 30px;
+
   a {
+    display: block;
+
     color: inherit;
     text-decoration: none;
     letter-spacing: 0.03em;
 
     &:hover {
       text-decoration: underline;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
   }
 }
@@ -161,6 +172,22 @@ $superman_bg_color: #003d85;
     letter-spacing: 0.02em;
   }
 
+  .header__contacts {
+    position: relative;
+    top: 0;
+
+    a:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .header__logo {
+    svg {
+      width: 82px;
+      height: 17px;
+    }
+  }
+
   .header__promo {
     padding-bottom: 80px;
   }
@@ -213,6 +240,13 @@ $superman_bg_color: #003d85;
   .header__top {
     padding: 20px 0;
     font: 20px/20px $bebas;
+  }
+
+  .header__logo {
+    svg {
+      width: 68px;
+      height: 15px;
+    }
   }
 
   .header__promo {
