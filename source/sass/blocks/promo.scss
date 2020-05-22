@@ -10,11 +10,11 @@ $promo_mobile_img_height: 292px;
 .promo__wrapper {
   @include wrapper-inner;
 
-  background: $promo_pic_bg_color url("../../img/powder.jpg") right center no-repeat;
+  background: $promo_pic_bg_color url("../img/powder.jpg") right center no-repeat;
   background-size: 660px auto;
 
   @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
-    background: $promo_pic_bg_color url("../../img/powder-2x.jpg") right center no-repeat;
+    background: $promo_pic_bg_color url("../img/powder-2x.jpg") right center no-repeat;
     background-size: 660px auto;
   }
 }
