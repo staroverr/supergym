@@ -65,16 +65,16 @@
     var itemsPerView = (wrapperWidth - itemWidth) / (itemWidth + itemsGutter) + 1; // количество видимых элементов
     var leftItemPosition = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсформации .slider_wrapper
-    var step = wrapperWidth + itemsGutter; // величина шага трансформации, равная ширине
+    var touchTransform = 0;
     var items = []; // массив элементов
 
     // сброс слайдера в начальное состояние
-    sliderInner.style.transform = 'translateX(0)';
+    sliderInner.removeAttribute('style');
     sliderItems.forEach(function (item) {
       item.removeAttribute('style');
     });
 
-    // наполнение массива _items
+    // наполнение массива items
     sliderItems.forEach(function (item, index) {
       items.push({
         item: item,
@@ -113,6 +113,7 @@
     var transformSlider = function (direction) {
       var nextItemPosition;
       var i;
+
       if (direction === 'right') {
         leftItemPosition = leftItemPosition + itemsPerView;
         if ((leftItemPosition + itemsPerView - 1) > position.getMax()) {
@@ -124,7 +125,7 @@
             items[nextItemPosition].item.style.transform = 'translateX(' + items[nextItemPosition].transform + 'px)';
           }
         }
-        transform -= step;
+        transform -= wrapperWidth + itemsGutter + touchTransform;
       }
       if (direction === 'left') {
         leftItemPosition = leftItemPosition - itemsPerView;
@@ -136,7 +137,7 @@
             items[nextItemPosition].item.style.transform = 'translateX(' + items[nextItemPosition].transform + 'px)';
           }
         }
-        transform += step;
+        transform += wrapperWidth + itemsGutter - touchTransform;
       }
       sliderInner.style.transform = 'translateX(' + transform + 'px)';
     };
@@ -150,11 +151,48 @@
       }
     };
 
+    var onSliderTouchStart = function (touchStartEvt) {
+      var initX = touchStartEvt.changedTouches[0].pageX;
+      var moveDirection;
+      touchTransform = transform;
+
+      var onSliderTouchMove = function (touchMoveEvt) {
+        var currX = touchMoveEvt.changedTouches[0].pageX;
+        var touchShift = initX - currX;
+
+        if (touchShift < 0) {
+          moveDirection = 'left';
+        } else if (touchShift > 0) {
+          moveDirection = 'right';
+        } else {
+          moveDirection = null;
+        }
+
+        transform -= touchShift;
+        initX = currX;
+        sliderInner.style.transform = 'translateX(' + transform + 'px)';
+      };
+
+      var onSliderTouchEnd = function () {
+        sliderInner.removeEventListener('touchmove', onSliderTouchMove);
+        sliderInner.removeEventListener('touchend', onSliderTouchEnd);
+        touchTransform = transform - touchTransform;
+
+        if (moveDirection) {
+          transformSlider(moveDirection);
+        }
+      };
+
+      sliderInner.addEventListener('touchmove', onSliderTouchMove);
+      sliderInner.addEventListener('touchend', onSliderTouchEnd);
+    };
+
     var setUpListeners = function () {
       // добавление к кнопкам "назад" и "вперед" обрботчика controlClick для события click
       sliderControls.forEach(function (contr) {
         contr.addEventListener('click', controlClick);
       });
+      sliderInner.addEventListener('touchstart', onSliderTouchStart);
     };
 
     // инициализация
