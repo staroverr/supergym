@@ -104,7 +104,7 @@ $actions_mobile_secondary_height: 211px;
 
 .actions__secondary {
   width: calc(50% - #{$actions_desktop_gutter} / 2);
-  height: $actions_primary_height;
+  min-height: $actions_primary_height;
 }
 
 .actions__sec-item {
@@ -132,8 +132,8 @@ $actions_mobile_secondary_height: 211px;
   }
 
   p {
-    margin: 0 0 auto;
-    min-height: 90px;
+    margin: 0 0 15px;
+    min-height: 75px;
     align-self: stretch;
 
     font: 16px/140% $roboto;
