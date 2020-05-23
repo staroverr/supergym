@@ -1,23 +1,24 @@
 .footer {
   @include wrapper-outer;
+  padding: 40px 0;
   background-color: $footer_bg_color;
   color: $white;
 }
 
 .footer__wrapper {
   @include wrapper-inner(false, true);
-  min-height: 108px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .footer__logo {
-  font: bold 26px/26px $bebas;
-  letter-spacing: 0.02em;
-  color: inherit;
-  text-transform: uppercase;
-  text-decoration: none;
+  font: 26px/26px $bebas;
+
+  svg {
+    width: 82px;
+    height: 17px;
+  }
 
   &:hover {
     opacity: 0.7;
@@ -25,14 +26,20 @@
 }
 
 .footer__menu {
-  margin: 0;
+  margin: 0 0 -15px;
   padding: 0;
+  max-width: 50%;
   display: flex;
+  flex-wrap: wrap;
 
   list-style: none;
 
   li:not(:last-child) {
     margin-right: 40px;
+  }
+
+  li {
+    margin-bottom: 15px;
   }
 }
 
@@ -50,32 +57,42 @@
 }
 
 .footer__social {
-  margin: 0;
+  margin: 0 0 -15px 15px;
   padding: 0;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 
   list-style: none;
 
   li:not(:last-child) {
     margin-right: 25px;
   }
+
+  li {
+    margin-bottom: 15px;
+  }
 }
 
 .footer__social-link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 @media (max-width: $tablet_max_width) {
-  .footer__wrapper {
-    min-height: 114px;
+  .footer {
+    padding: 42px 0;
   }
 
   .footer__logo {
-    font: bold 24px/24px $bebas;
+    svg {
+      width: 82px;
+      height: 17px;
+    }
   }
 
   .footer__menu {
+    max-width: 65%;
+
     li:not(:last-child) {
       margin-right: 30px;
     }
@@ -111,6 +128,7 @@
   .footer__menu {
     display: block;
     margin-bottom: 15px;
+    max-width: none;
     columns: 2;
     column-gap: 76px;
 
@@ -129,6 +147,8 @@
   }
 
   .footer__social {
+    max-width: none;
+
     li:not(:last-child) {
       margin-right: 35px;
     }
