@@ -49,6 +49,11 @@ $rev_mobile_img_height: 68px;
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:active,
+  &:hover {
+    outline: none;
+  }
 }
 
 .reviews__slider-wrapper {
