@@ -79,7 +79,7 @@ $subscr_mobile_card_height: 380px;
 }
 
 .subscr__card-list {
-  margin: 0;
+  margin: 0 0 -#{$subsct_desktop_card_gutter};
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -92,6 +92,7 @@ $subscr_mobile_card_height: 380px;
   box-sizing: border-box;
   width: calc(33.3% - #{$subsct_desktop_card_gutter} * 2 / 3);
   min-height: $subscr_card_height;
+  margin-bottom: $subsct_desktop_card_gutter;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,7 +107,7 @@ $subscr_mobile_card_height: 380px;
     transition: 0.3s;
   }
 
-  &:not(:last-child) {
+  &:not(:nth-child(3)) {
     margin-right: $subsct_desktop_card_gutter;
   }
 
