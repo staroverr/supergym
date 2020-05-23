@@ -17,18 +17,23 @@ $slider_mobile_btn_gutter: 7px;
 
 .trainers__wrapper {
   @include wrapper-inner;
+  max-width: $desktop-content-width + 2 * ($slider_btn_gutter + $slider_btn_width);
+  display: flex;
+  flex-direction: column;
 
   h2 {
     margin: 0 0 50px;
+    width: $desktop-content-width;
+    align-self: center;
 
     @include h2-heading;
   }
 }
 
 .trainers__slider {
-  margin: 0 -1 * ($slider_btn_width + $slider_btn_gutter);
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .trainers__slider-control {
@@ -43,7 +48,6 @@ $slider_mobile_btn_gutter: 7px;
 }
 
 .trainers__slider-wrapper {
-  margin: 0 $slider_btn_gutter;
   width: $desktop-content-width;
   overflow: hidden;
 }
