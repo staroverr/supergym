@@ -45,6 +45,7 @@ $form_tablet_input_gap: 60px;
   background-color: $form_bg_color;
   border: none;
   border-bottom: 1px solid #74819c;
+  border-radius: 0;
 
   &::placeholder {
     font: 14px/16px $roboto;
@@ -81,6 +82,10 @@ $form_tablet_input_gap: 60px;
     border-width: 10px;
     background-color: $white;
     color: $blue_alt_color;
+  }
+
+  &:active {
+    outline: none;
   }
 }
 
