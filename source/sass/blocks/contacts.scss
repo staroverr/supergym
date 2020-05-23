@@ -50,6 +50,15 @@ $contacts_tablet_content_width: 502px;
 
 .contacts__item-value {
   font: 14px/21px $roboto;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media (max-width: $tablet_max_width) {
