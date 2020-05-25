@@ -126,6 +126,9 @@
           }
         }
         transform -= wrapperWidth + itemsGutter + touchTransform;
+        if (transform % (wrapperWidth + itemsGutter)) {
+          transform -= wrapperWidth + itemsGutter - (transform % (wrapperWidth + itemsGutter));
+        }
       }
       if (direction === 'left') {
         leftItemPosition = leftItemPosition - itemsPerView;
@@ -138,6 +141,9 @@
           }
         }
         transform += wrapperWidth + itemsGutter - touchTransform;
+        if (transform % (wrapperWidth + itemsGutter)) {
+          transform += wrapperWidth + itemsGutter - (transform % (wrapperWidth + itemsGutter));
+        }
       }
       sliderInner.style.transform = 'translateX(' + transform + 'px)';
     };
