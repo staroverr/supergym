@@ -79,12 +79,12 @@ $gym_tablet_video_height: 167px;
   cursor: pointer;
 
   path {
-    transition: 0.1s;
+    transition: 0.2s;
+  }
 
-    &:hover {
-      stroke-width: 5px;
-      stroke: $white;
-    }
+  &:hover path {
+    stroke-width: 5px;
+    stroke: $white;
   }
 }
 
