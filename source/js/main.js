@@ -65,7 +65,7 @@
     var itemsPerView = (wrapperWidth - itemWidth) / (itemWidth + itemsGutter) + 1; // количество видимых элементов
     var leftItemPosition = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсформации .slider_wrapper
-    var touchTransform = 0;
+    // var touchTransform = 0;
     var items = []; // массив элементов
 
     // сброс слайдера в начальное состояние
@@ -125,10 +125,7 @@
             items[nextItemPosition].item.style.transform = 'translateX(' + items[nextItemPosition].transform + 'px)';
           }
         }
-        transform -= wrapperWidth + itemsGutter + touchTransform;
-        if (transform % (wrapperWidth + itemsGutter)) {
-          transform -= wrapperWidth + itemsGutter - (transform % (wrapperWidth + itemsGutter));
-        }
+        transform -= wrapperWidth + itemsGutter;
       }
       if (direction === 'left') {
         leftItemPosition = leftItemPosition - itemsPerView;
@@ -140,10 +137,7 @@
             items[nextItemPosition].item.style.transform = 'translateX(' + items[nextItemPosition].transform + 'px)';
           }
         }
-        transform += wrapperWidth + itemsGutter - touchTransform;
-        if (transform % (wrapperWidth + itemsGutter)) {
-          transform += wrapperWidth + itemsGutter - (transform % (wrapperWidth + itemsGutter));
-        }
+        transform += wrapperWidth + itemsGutter;
       }
       sliderInner.style.transform = 'translateX(' + transform + 'px)';
     };
@@ -160,7 +154,7 @@
     var onSliderTouchStart = function (touchStartEvt) {
       var initX = touchStartEvt.changedTouches[0].pageX;
       var moveDirection;
-      touchTransform = transform;
+      var touchTransform = 0;
 
       var onSliderTouchMove = function (touchMoveEvt) {
         var currX = touchMoveEvt.changedTouches[0].pageX;
@@ -174,17 +168,15 @@
           moveDirection = null;
         }
 
-        transform -= touchShift;
+        touchTransform += Math.abs(touchShift);
         initX = currX;
-        sliderInner.style.transform = 'translateX(' + transform + 'px)';
       };
+
 
       var onSliderTouchEnd = function () {
         sliderInner.removeEventListener('touchmove', onSliderTouchMove);
         sliderInner.removeEventListener('touchend', onSliderTouchEnd);
-        touchTransform = transform - touchTransform;
-
-        if (moveDirection) {
+        if (touchTransform > 0.3 * wrapperWidth) {
           transformSlider(moveDirection);
         }
       };
